@@ -1,0 +1,14 @@
+name: run a0323
+on:
+  push:
+  schedule:
+  - cron: "0 0 * * *"
+jobs:
+  build:
+    name: run python build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run python
+      run: |
+        python3 a0323.py
